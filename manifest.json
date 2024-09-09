@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "perplexity automator v2",
+  "version": "2.0",
+  "description": "Automates interactions with perplexity on a specific webpage.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://emojihub.yurace.pro/api/random",
+    "https://localhost:7115/api/gpt"
+  ],"browser_action": {
+    "default_popup": "auto.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.perplexity.ai/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
